@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    width: 100vw;
+    height: 80px;
+    background-color: #E0E0E0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-menu {
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo menu */
+.container-menu-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-menu-logo img {
+    width: 40px;
+}
+
+.container-menu-logo h1 {
+    width: 40px;
+    margin-left: 20px;
+    white-space: nowrap;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Links menu */
+.container-menu-links {
+    width: 350px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.container-menu-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container-menu-links ul li {
+    list-style-type: none;
+}
+
+/* Separador do menu */
+.container-menu-links li + li::before {
+    content: " | ";
+    padding: 0 10px;
+    color: #979797;
+}
+
+.container-menu-links ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+/* ------------------------------------------- */
+
+/* Container transações */
+.container-body {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 30px;
+}
+
+/* Formulário */
+.container-form {
+    width: 40%;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+}
+
+.container-form form h2 {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container-form form label {
+    margin-bottom: .3em;
+}
+
+.container-form form input {
+    margin-bottom: 1.5em;
+    padding: .5em;
+    border: 1px solid #979797;
+    border-radius: 4px;
+}
+
+.lista-transacao{
+    background-image: url("../img/down.svg");
+    background-position: calc(100% - 8px);
+    background-repeat: no-repeat;
+    background-size: 11px;
+}
+
+.container-form form .lista-transacao:not(:placeholder-shown) {
+  background-image: none;
+}
+
+#adicionar-transacao {
+    background-color: black;
+    color: white;
+    border: 0;
+    font-size:
+}
+
+/* Extrato de Transações */
+.container-extrato {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-extrato h2 {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container-extrato hr {
+    border: 1px solid #979797;
+}
+
+.header-extrato {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px 5px;
+}
+
+.header-extrato h3 {
+    font-weight: 700;
+}
+
+.body-extrato hr{
+    margin-bottom: 2px;
+}
+
+.extrato-desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.valor-desc {
+    margin-right: 20px;
+}
+
+.desc {
+    display: flex;
+    flex-direction: row;
+}
+
+.desc p:first-child {
+    margin-right: 11px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.total-extrato {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px 0;
+}
+
+.total-extrato-valor{
+    text-align: right;
+}
+
+footer {
+    background-color: black;
+    height: 8px;
+    position:absolute;
+	bottom:0;
+	width:100%;
+}
