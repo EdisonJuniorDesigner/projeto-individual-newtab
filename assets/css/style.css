@@ -1,32 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
-* {
-    padding: 0;
+body {
     margin: 0;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    background: #f7f7f7;
+    overflow-x: hidden;
 }
 
-/* Cabeçalho */
+img {
+    max-width: 100%;
+    display: block;
+}
 
-.cabecalho {
-    width: 100vw;
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0px;
+}
+
+header {
+    background: #c6c6c6;
     height: 80px;
-    background-color: #E0E0E0;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
-.container-menu {
+/* Cabeçalho Desktop*/
+.cabecalho {
     width: 1100px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    justify-items: center;
 }
 
-/* Logo menu */
 .container-menu-logo {
     display: flex;
     flex-direction: row;
@@ -34,126 +52,137 @@
 }
 
 .container-menu-logo img {
-    width: 40px;
+    max-width: 100%;
+}
+
+.container-menu-logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
 }
 
 .container-menu-logo h1 {
-    width: 40px;
-    margin-left: 20px;
-    white-space: nowrap;
-    font-size: 1.2em;
-    font-weight: 600;
+    margin-left: 1.2rem;
 }
 
 /* Links menu */
-.container-menu-links {
-    width: 350px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-}
 
-.container-menu-links ul {
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-
-.container-menu-links ul li {
-    list-style-type: none;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: white;
 }
 
 /* Separador do menu */
-.container-menu-links li + li::before {
+.menu li + li::before {
     content: " | ";
+    font-size: 1.2rem;
     padding: 0 10px;
     color: #979797;
 }
 
-.container-menu-links ul li a {
-    text-decoration: none;
+.menu li a {
     color: black;
-    font-weight: 600;
 }
 
-/* ------------------------------------------- */
-
-/* Container transações */
-.container-body {
-    width: 100vw;
-    display: flex;
+/* Cabeçalho Mobile*/
+.cabecalho-mobile {
+    width: 1100px;
+    display: none;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.cabecalho-mobile img {
+    max-width: 100%;
+}
+
+.cabecalho-mobile a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+/* ----------------------- */
+
+main {
+    display: flex;
     justify-content: center;
 }
 
 .container {
+    margin-top: 3rem;
     width: 1100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    margin-top: 30px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
 }
 
-/* Formulário */
-.container-form {
-    width: 40%;
+.form-transacao {
+    max-width: 100%;
     border: 1px solid #979797;
     border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 1.2rem;
 }
 
-.container-form form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 95%;
-}
-
-.container-form form h2 {
+.form-transacao h2 {
     font-size: 1.2em;
     text-align: center;
     margin: 20px 0;
 }
 
-.container-form form label {
-    margin-bottom: .3em;
+.form {
+    display: grid;
 }
 
-.container-form form input {
+.form-item {
+    display: grid;
+}
+
+.form-item label {
+    margin-bottom: 0.3em;
+}
+
+.form-item input {
     margin-bottom: 1.5em;
-    padding: .5em;
+    padding: 0.5em;
     border: 1px solid #979797;
     border-radius: 4px;
 }
 
-.lista-transacao{
+.form-button {
+    display: grid;
+}
+
+.lista-transacao {
     background-image: url("../img/down.svg");
     background-position: calc(100% - 8px);
     background-repeat: no-repeat;
     background-size: 11px;
 }
 
-.container-form form .lista-transacao:not(:placeholder-shown) {
-  background-image: none;
+.form-item .lista-transacao:not(:placeholder-shown) {
+    background-image: none;
 }
 
 #adicionar-transacao {
     background-color: black;
     color: white;
     border: 0;
-    font-size:
+    cursor: pointer;
 }
 
 /* Extrato de Transações */
 .container-extrato {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
 }
 
 .container-extrato h2 {
@@ -163,7 +192,9 @@
 }
 
 .container-extrato hr {
-    border: 1px solid #979797;
+    width: 100%;
+    height: 1px;
+    background: #979797;
 }
 
 .header-extrato {
@@ -177,7 +208,7 @@
     font-weight: 700;
 }
 
-.body-extrato hr{
+.body-extrato hr {
     margin-bottom: 2px;
 }
 
@@ -211,14 +242,14 @@
     margin: 10px 20px 0;
 }
 
-.total-extrato-valor{
+.total-extrato-valor {
     text-align: right;
 }
 
 footer {
     background-color: black;
     height: 8px;
-    position:absolute;
-	bottom:0;
-	width:100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

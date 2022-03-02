@@ -1,98 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Projeto Individual</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/css/style.css">
-    </head>
-    <body>
-        <!-- Cabeçalho do Site -->
-        <header class="cabecalho">
-            <div class="container-menu">
-                <div class="container-menu-logo">
-                    <img src="./assets/img/logo.svg" >
-                    <h1>Controle financeiro</h1>
-                </div>
-                <nav class="container-menu-links">
-                    <ul>
-                        <li><a href="./index.html">Cadastro de transações</a></li>
-                        <li><a href="#">Limpar dados</a></li>
-                    </ul>
-                </nav>
+
+<head>
+    <title>Projeto Individual</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/mobile-style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Cabeçalho Desktop -->
+        <div class="cabecalho">
+            <div class="container-menu-logo">
+                <a href=""><img src="./assets/img/logo.svg"></a>
+                <h1><a href="">Controle financeiro</a></h1>
             </div>
-        </header>
+            <nav aria-label="primária">
+                <ul class="menu">
+                    <li><a href="">Cadastro de transações</a></li>
+                    <li><a href="">Limpar dados</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        <section class="container-body">
-            <section class="container">
-                <!-- Formulário de Nova Transação -->
-                <div class="container-form">
-                    <form class="form-transacao" method="post">
-                        <h2>Nova Transação</h2>
-                        <label>Tipo de transação</label>
-                        <input class="lista-transacao" list="tipo-transacao" type="text" placeholder="Compra">
-                        <datalist id="tipo-transacao">
-                            <option value="Compra">
-                            <option value="Venda">
-                            <option value="Transferência">
-                        </datalist>
+        <!-- Cabeçalho Tablet e Mobile -->
+        <div class="cabecalho-mobile">
+            <a href=""><img src="./assets/img/logo.svg"></a>
+            <h1><a href="">Controle financeiro</a></h1>
+            <a href=""><img src="./assets/img/shape.svg"></a>
+        </div>
+    </header>
 
-                        <label for="mercadoria">Nome da mercadoria</label>
-                        <input type="text" id="mercadoria" placeholder="Input">
+    <main>
+        <section class="container">
+            <!-- Formulário de Nova Transação -->
+            <div class="container-form" aria-labelledby="titulo-form">
+                <form class="form-transacao" method="post">
+                    <h2 id="titulo-form">Nova Transação</h2>
+                    <div class="form">
+                        <div class="form-item">
+                            <label>Tipo de transação</label>
+                            <input class="lista-transacao" list="tipo-transacao" type="text" placeholder="Compra">
+                            <datalist id="tipo-transacao">
+                                <option value="Compra">
+                                <option value="Venda">
+                                <option value="Transferência">
+                            </datalist>
+                        </div>
 
-                        <label for="valor">Valor</label>
-                        <input type="text" id="valor" placeholder="R$ 0,00">
+                        <div class="form-item">
+                            <label for="mercadoria">Nome da mercadoria</label>
+                            <input type="text" id="mercadoria" placeholder="Input">
+                        </div>
 
+                        <div class="form-item">
+                            <label for="valor">Valor</label>
+                            <input type="text" id="valor" placeholder="R$ 0,00">
+                        </div>
+                    </div>
+                    <div class="form-button form-item">
                         <input type="submit" id="adicionar-transacao" value="Adicionar transação">
-                    </form>
-                </div>
+                    </div>
+                </form>
+            </div>
 
-                <!-- Extrato de Transações -->
-                <div class="container-extrato">
-                    <h2>Extrato de transações</h2>
-                    <div class="header-extrato">
-                        <h3>Mercadoria</h3>
-                        <h3>Valor</h3>
+            <!-- Extrato de Transações -->
+            <div class="container-extrato" aria-labelledby="titulo-transacoes">
+                <h2 id="titulo-transacoes">Extrato de transações</h2>
+                <div class="header-extrato">
+                    <h3>Mercadoria</h3>
+                    <h3>Valor</h3>
+                </div>
+                <hr>
+                <div class="body-extrato">
+                    <div class="extrato-desc">
+                        <div class="desc">
+                            <p>+</p>
+                            <p>Lorem ipsum dolor sit amet<br>consectetur</p>
+                        </div>
+                        <p class="valor-desc">R$ 12.999,99</p>
                     </div>
                     <hr>
-                    <div class="body-extrato">
-                        <div class="extrato-desc">
-                            <div class="desc">
-                                <p>+</p>
-                                <p>Lorem ipsum dolor sit amet<br>consectetur</p>
-                            </div>
-                            <p class="valor-desc">R$ 12.999,99</p>
+                    <div class="extrato-desc">
+                        <div class="desc">
+                            <p>-</p>
+                            <p>Quis nostrud exercitation</p>
                         </div>
-                        <hr>
-                        <div class="extrato-desc">
-                            <div class="desc">
-                                <p>-</p>
-                                <p>Quis nostrud exercitation</p>
-                            </div>
-                            <p class="valor-desc">R$ 99,99</p>
-                        </div>
-                        <hr>
-                        <div class="extrato-desc">
-                            <div class="desc">
-                                <p>+</p>
-                                <p>Lorem ipsum</p>
-                            </div>
-                            <p class="valor-desc">R$ 9,99</p>
-                        </div>
-                        <hr>
+                        <p class="valor-desc">R$ 99,99</p>
                     </div>
                     <hr>
-                    <div class="total-extrato">
-                        <h3>Total</h3>
-                        <div class="total-extrato-valor">
-                            <h3>R$ 12.909,99</h3>
-                            <p>[LUCRO]</p>
+                    <div class="extrato-desc">
+                        <div class="desc">
+                            <p>+</p>
+                            <p>Lorem ipsum</p>
                         </div>
+                        <p class="valor-desc">R$ 9,99</p>
+                    </div>
+                    <hr>
+                </div>
+                <hr>
+                <div class="total-extrato">
+                    <h3>Total</h3>
+                    <div class="total-extrato-valor">
+                        <h3>R$ 12.909,99</h3>
+                        <p>[LUCRO]</p>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
+    </main>
 
-        <!-- Rodapé -->
-        <footer></footer>
-    </body>
+    <!-- Rodapé -->
+    <footer>
+    </footer>
+</body>
+
 </html>
