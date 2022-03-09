@@ -41,22 +41,20 @@
                     <div class="form">
                         <div class="form-item">
                             <label>Tipo de transação</label>
-                            <input class="lista-transacao" list="tipo-transacao" type="text" placeholder="Compra">
-                            <datalist id="tipo-transacao">
-                                <option value="Compra">
-                                <option value="Venda">
-                                <option value="Transferência">
-                            </datalist>
+                            <select class="lista-transacao" name="type" required>
+                                <option value="compra">Compra</option>
+                                <option value="venda">Venda</option>
+                            </select>
                         </div>
 
                         <div class="form-item">
                             <label for="mercadoria">Nome da mercadoria</label>
-                            <input type="text" id="mercadoria" placeholder="Input">
+                            <input type="text" id="mercadoria" placeholder="Input" required>
                         </div>
 
                         <div class="form-item">
                             <label for="valor">Valor</label>
-                            <input type="text" id="valor" placeholder="R$ 0,00">
+                            <input type="text" id="valor" placeholder="R$ 0,00" required>
                         </div>
                     </div>
                     <div class="form-button form-item">

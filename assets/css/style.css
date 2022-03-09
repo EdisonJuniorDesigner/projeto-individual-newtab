@@ -151,11 +151,18 @@ main {
     margin-bottom: 0.3em;
 }
 
-.form-item input {
+.form-item input,
+select {
     margin-bottom: 1.5em;
     padding: 0.5em;
     border: 1px solid #979797;
     border-radius: 4px;
+    background-color: #fff;
+}
+
+select,
+input:focus {
+    outline: none;
 }
 
 .form-button {
