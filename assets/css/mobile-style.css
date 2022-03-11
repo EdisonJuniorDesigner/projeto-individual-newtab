@@ -12,7 +12,10 @@
         display: flex;
         padding: 1rem;
     }
-    .cabecalho {
+    .btn-hamb {
+        display: block;
+    }
+    nav {
         display: none;
     }
     .container {
@@ -34,16 +37,25 @@
     }
 }
 
-@media (max-width: 494px) {
-    .menu {
-        width: 50vw;
+@media (max-width: 604px) {
+    .container {
+        margin-top: 26px;
     }
-    .cabecalho-mobile h1 a {
+    .cabecalho p a {
         font-size: 1.3rem;
     }
     .form {
         grid-template-columns: 1fr;
         gap: 0.1rem;
+    }
+    #titulo-form {
+        display: none;
+    }
+    .form-transacao {
+        border: none;
+        border-bottom: 1px solid #979797;
+        border-radius: 0;
+        padding: 0;
     }
     .container-extrato {
         font-size: 0.9rem;
