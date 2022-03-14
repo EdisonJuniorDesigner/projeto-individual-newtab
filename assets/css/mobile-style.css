@@ -8,16 +8,71 @@
 }
 
 @media (max-width: 768px) {
-    .cabecalho-mobile {
-        display: flex;
-        padding: 1rem;
+    .nav-text {
+        flex: none;
+        margin: 0;
     }
-    .btn-hamb {
+    .btn-hamb,
+    .btn-close {
         display: block;
+        cursor: pointer;
     }
     nav {
+        display: none; /* Flex */
+        background-color: #333333;
+        position: fixed;
+        width: 40%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding: 0;
+    }
+    .show-menu {
+        display: flex;
+    }
+    .close-menu {
         display: none;
     }
+    .menu li + li::before {
+        display: none;
+    }
+    .menu {
+        background: none;
+        width: 100%;
+        flex-direction: column;
+        justify-content: start;
+        margin-top: 60px;
+        padding: 0;
+        padding-right: 15px;
+    }
+    .menu li {
+        width: 100%;
+    }
+    .menu li a {
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 5px 0;
+        padding-right: 15px;
+        text-align: right;
+        transition: all ease-in-out 300ms;
+        color: #fff;
+    }
+    .menu li a:hover {
+        background: #c4c4c4;
+        border-radius: 0px;
+        color: #000;
+    }
+    .btn-close {
+        display: block;
+        position: absolute;
+        left: 0;
+        border: 0;
+        top: 0;
+        padding: 15px;
+    }
+
     .container {
         grid-template-columns: 1fr;
         margin-bottom: 2rem;
@@ -35,9 +90,15 @@
         font-size: 1rem;
         padding: 0.5rem 3rem;
     }
+    .linha-final {
+        margin: 0;
+    }
 }
 
 @media (max-width: 604px) {
+    nav {
+        width: 85%;
+    }
     .container {
         margin-top: 26px;
     }

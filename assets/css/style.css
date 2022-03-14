@@ -45,6 +45,11 @@ header {
     justify-items: center;
 }
 
+.nav-text {
+    flex: 1;
+    margin-left: 15px;
+}
+
 .cabecalho img {
     max-width: 100%;
 }
@@ -82,11 +87,12 @@ header {
     color: black;
 }
 
-.btn-hamb {
+.btn-hamb,
+.btn-close {
     display: none;
 }
 
-/* ----------------------- */
+/* ---Fim do Cabeçalho--- */
 
 main {
     display: flex;
@@ -126,13 +132,13 @@ main {
 }
 
 .form-item label {
-    margin-bottom: 0.3em;
+    margin-bottom: 5px;
 }
 
 .form-item input,
 select {
-    margin-bottom: 1.5em;
-    padding: 0.5em;
+    margin-bottom: 20px;
+    padding: 7px;
     border: 1px solid #979797;
     border-radius: 4px;
     background-color: #fff;
@@ -206,6 +212,8 @@ input:focus {
 }
 
 .valor-desc {
+    width: 60%;
+    text-align: right;
     margin-right: 20px;
 }
 
@@ -218,6 +226,10 @@ input:focus {
     margin-right: 11px;
     margin-left: 20px;
     text-align: center;
+}
+
+.linha-final {
+    margin: -7px 0 0 0;
 }
 
 .total-extrato {

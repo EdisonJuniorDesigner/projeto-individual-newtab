@@ -13,16 +13,27 @@
         <!-- Cabeçalho Desktop -->
         <div class="cabecalho">
             <a href=""><img src="./assets/img/logo.svg"></a>
-            <p><a href="">Controle financeiro</a></p>
+            <div class="nav-text">
+                <p>
+                    <a href="">Controle financeiro</a>
+                </p>
+            </div>
             <nav aria-label="primária">
                 <ul class="menu">
-                    <li><a href="">Cadastro de transações</a></li>
-                    <li><a href="">Limpar dados</a></li>
+                    <li>
+                        <a href="">Cadastro de transações</a>
+                    </li>
+                    <li>
+                        <a href="">Limpar dados</a>
+                    </li>
                 </ul>
+                <a href="" class="btn-close" id="close">
+                    <img src="./assets/img/close.svg">
+                </a>
             </nav>
-            <a href="" class="btn-hamb">
+            <div href="" class="btn-hamb" id="menu">
                 <img src="./assets/img/shape.svg">
-            </a>
+            </div>
         </div>
     </header>
 
@@ -69,7 +80,7 @@
                     <div class="extrato-desc">
                         <div class="desc">
                             <p>+</p>
-                            <p>Lorem ipsum dolor sit amet<br>consectetur</p>
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
                         </div>
                         <p class="valor-desc">R$ 12.999,99</p>
                     </div>
@@ -91,7 +102,7 @@
                     </div>
                     <hr>
                 </div>
-                <hr>
+                <hr class="linha-final">
                 <div class="total-extrato">
                     <h3>Total</h3>
                     <div class="total-extrato-valor">
@@ -106,6 +117,7 @@
     <!-- Rodapé -->
     <footer>
     </footer>
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
