@@ -24,7 +24,7 @@
                         <a href="">Cadastro de transações</a>
                     </li>
                     <li>
-                        <a href="">Limpar dados</a>
+                        <a href="" onclick="deleteTransactions()">Limpar dados</a>
                     </li>
                 </ul>
                 <a href="" class="btn-close" id="close">
@@ -41,25 +41,25 @@
         <section class="container">
             <!-- Formulário de Nova Transação -->
             <div class="container-form" aria-labelledby="titulo-form">
-                <form class="form-transacao" method="post">
+                <form class="form-transacao" onsubmit="transactionForm(event)">
                     <h2 id="titulo-form">Nova Transação</h2>
                     <div class="form">
                         <div class="form-item">
                             <label>Tipo de transação</label>
-                            <select class="lista-transacao" name="type" required>
-                                <option value="compra">Compra</option>
-                                <option value="venda">Venda</option>
+                            <select class="lista-transacao" name="type" id="type" required>
+                                <option>Compra</option>
+                                <option>Venda</option>
                             </select>
                         </div>
 
                         <div class="form-item">
-                            <label for="mercadoria">Nome da mercadoria</label>
-                            <input type="text" id="mercadoria" placeholder="Input" required>
+                            <label for="desc">Nome da mercadoria</label>
+                            <input type="text" name="desc" id="desc" placeholder="Input" required>
                         </div>
 
                         <div class="form-item">
-                            <label for="valor">Valor</label>
-                            <input type="text" id="valor" placeholder="R$ 0,00" required>
+                            <label for="value">Valor</label>
+                            <input type="text" name="value" id="value" onkeyup="testaCampoValor()" placeholder="R$ 0,00" required>
                         </div>
                     </div>
                     <div class="form-button form-item">
@@ -77,37 +77,13 @@
                 </div>
                 <hr>
                 <div class="body-extrato">
-                    <div class="extrato-desc">
-                        <div class="desc">
-                            <p>+</p>
-                            <p>Lorem ipsum dolor sit amet consectetur</p>
-                        </div>
-                        <p class="valor-desc">R$ 12.999,99</p>
-                    </div>
-                    <hr>
-                    <div class="extrato-desc">
-                        <div class="desc">
-                            <p>-</p>
-                            <p>Quis nostrud exercitation</p>
-                        </div>
-                        <p class="valor-desc">R$ 99,99</p>
-                    </div>
-                    <hr>
-                    <div class="extrato-desc">
-                        <div class="desc">
-                            <p>+</p>
-                            <p>Lorem ipsum</p>
-                        </div>
-                        <p class="valor-desc">R$ 9,99</p>
-                    </div>
-                    <hr>
+
                 </div>
                 <hr class="linha-final">
                 <div class="total-extrato">
                     <h3>Total</h3>
                     <div class="total-extrato-valor">
-                        <h3>R$ 12.909,99</h3>
-                        <p>[LUCRO]</p>
+                        <h3 id="total-values"></h3>
                     </div>
                 </div>
             </div>
