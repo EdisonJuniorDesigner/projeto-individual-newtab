@@ -129,6 +129,7 @@ function testaCampoValor() {
         nValue = nValue.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
     }
 
+    // Vai até a casa dos milhões
     if (nValue.length > 10) {
         nValue = nValue.replace(
             /([0-9]{3}).([0-9]{3}),([0-9]{2}$)/g,
