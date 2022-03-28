@@ -152,5 +152,6 @@ function deleteTransactions(e) {
     }
 }
 
+// Chamando as funções ao iniciar o script
 drawTransaction();
 total();
