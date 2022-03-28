@@ -142,10 +142,13 @@ function testaCampoValor() {
 
 // Função para deletar os dados da tabela
 function deleteTransactions(e) {
-    transactions.splice(e);
-    drawTransaction();
-    localStorage.setItem("transactions", JSON.stringify(transactions));
-    alert("Os dados foram excluídos com sucesso!");
+    let confirm = window.confirm("Deseja apagar limpar a lista?");
+
+    if (confirm) {
+        transactions.splice(e);
+        drawTransaction();
+        localStorage.setItem("transactions", JSON.stringify(transactions));
+    }
 }
 
 drawTransaction();
