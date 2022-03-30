@@ -143,7 +143,7 @@ function testaCampoValor() {
 
 // Função para deletar os dados da tabela
 function deleteTransactions(e) {
-    let confirmClean = confirm("Deseja apagar limpar a lista?");
+    let confirmClean = confirm("Deseja apagar a lista?");
 
     if (confirmClean) {
         transactions.splice(e);
